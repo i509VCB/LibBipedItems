@@ -1,37 +1,41 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "libbipedmodel",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Lib Biped Models",
+  "description": "A Library which allows adjustment of BipedEntityModels before rendering.",
   "authors": [
-    "Me!"
+    {
+      "name": "i509VCB",
+      "minecraft": "765e5d33-c991-454f-8775-b6a7a394c097",
+      "contact": {
+        "sources": "https://github.com/i509VCB/",
+        "discord": "i509VCB#9778"
+      }
+    }
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/i509VCB/LibBipedModel",
+    "sources": "https://github.com/i509VCB/LibBipedModel",
+    "issues": "https://github.com/i509VCB/LibBipedModel/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "me.i509.fabric.libbipedmodel.LibBipedModel"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mixins.libbipedmodel.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.2",
     "fabric": "*",
     "minecraft": "1.15.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }
